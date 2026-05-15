@@ -1,29 +1,26 @@
-# Crypto Fundraising Skills Hub
+# Crypto Fundraising Skill
 
-OpenClaw skills for crypto fundraising / VC deal research.
+OpenClaw skill for crypto fundraising / VC deal research via public web data.
 
-## Skills included
+**No API keys required.** Data is scraped from DropsTab and Crypto-Fundraising.info.
 
-### 1. crypto-fundraising (no API key needed)
+## What it does
 
-Unified skill for crypto fundraising and VC data from DropsTab and Crypto-Fundraising.info. Query funding rounds, VC investments, project fundraising history, and investor details by scraping public web pages. No API key required.
+- Query recent fundraising rounds across crypto
+- Get detailed project funding history (amount, valuation, investors, source links)
+- Look up investor / VC profiles
+- Cross-reference data from two sources for accuracy
 
-**Use when:** asking about recent funding rounds, VC deals, who invested in what, project financing details, investor information.
+## Data sources
 
-**Data sources:**
-- **DropsTab** (dropstab.com) — full fundraising history per project, investor profiles, source links
-- **Crypto-Fundraising.info** — clean text data with investor names, project descriptions
-
-### 2. drops-tab (requires API key)
-
-Direct DropsTab API integration for structured data access. Requires a paid DropsTab API subscription ($19/mo starting).
-
-**Use when:** you need programmatic access to funding rounds, investors, token unlocks via API endpoints.
+| Source | Strength | Weakness |
+|--------|----------|----------|
+| **DropsTab** | Full fundraising history per project, investor profiles, source links | VC names in images on list pages |
+| **Crypto-Fundraising.info** | Clean text, investor names readable, project descriptions | Fewer projects |
 
 ## Installation
 
 ```bash
-# Install all skills
 npx skills add https://github.com/tleavesolivia/Crypto-fundraising
 
 # Or install without prompts

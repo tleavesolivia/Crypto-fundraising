@@ -3,7 +3,7 @@ name: crypto-fundraising
 description: |
   Unified skill for crypto fundraising/VC data from DropsTab and Crypto-Fundraising.info.
   Query funding rounds, VC investments, project fundraising history, investor details.
-  Use when user asks about: funding rounds, VC deals, fundraising data, who invested,
+  Use when user asks about: crypto funding rounds, VC deals, fundraising data, who invested,
   recent rounds, project financing details, investor information.
   No API key needed — data is scraped from public web pages.
 ---
@@ -14,7 +14,7 @@ Fetches crypto fundraising data from two public sources for cross-validation:
 
 | Source | Strength | Weakness |
 |--------|----------|----------|
-| **DropsTab** (dropstab.com) | Full history per project, investor profiles, source links | Some images without alt text for VCs on list pages |
+| **DropsTab** (dropstab.com) | Full history per project, investor profiles, source links | Some images without alt text for VC names on list pages |
 | **Crypto-Fundraising.info** | Clean text, investor names readable, project descriptions | Fewer projects, less historical data |
 
 ---
@@ -82,10 +82,10 @@ When slug is unknown, search by project name on the site.
 
 When the user asks about fundraising:
 
-1. **"List fundraising rounds" / "Recent funding"** → Fetch DropsTab list page
-2. **"Project X details"** → Try DropsTab detail page first, then CFI for description
-3. **"Who invested in X"** → Fetch both pages and cross-reference
-4. **"Past 2 weeks funding"** → Fetch DropsTab list, filter by date from response
+1. **"List fundraising rounds" / "Recent funding"** — Fetch DropsTab list page
+2. **"Project X details"** — Try DropsTab detail page first, then CFI for description
+3. **"Who invested in X"** — Fetch both pages and cross-reference
+4. **"Past 2 weeks funding"** — Fetch DropsTab list, filter by date from response
 
 Extract data carefully:
 - Amounts may be in raw numbers (e.g., `120000000` → $120M)
